@@ -1,7 +1,6 @@
 <?php
 
-
-namespace DataStructures\Stacks;
+namespace App\DataStructures\Stacks;
 
 class Stack 
 {
