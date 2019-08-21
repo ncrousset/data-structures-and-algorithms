@@ -1,5 +1,8 @@
 <?php
 
+
+namespace DataStructures\Stacks;
+
 class Stack 
 {
 
@@ -32,9 +35,7 @@ class Stack
 
     public function print() : void
     {
-        if($this->size > 0) {
-            echo implode(", ", $this->items);
-        } 
+        echo ($this->size > 0) ? implode(", ", $this->items) : 'Null';
     }
 
     public function clear() : void
