@@ -1,6 +1,6 @@
 <?php
 
-namespace App\DataStructures;
+namespace Tests\DataStructures;
 
 
 use PHPUnit\Framework\TestCase;
