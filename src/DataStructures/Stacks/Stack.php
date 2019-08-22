@@ -12,9 +12,9 @@ class Stack
         return array_push($this->items, $element);
     }
 
-    public function pop() : bool
+    public function pop()
     {
-        return (array_pop($this->items)) != null ? true : false;
+        return array_pop($this->items);
     }
 
     public function last() 
