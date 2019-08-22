@@ -6,28 +6,43 @@ use App\DataStructures\Stacks\Stack;
 
 class DecimalToBinary
 {
-    public function getBinary(int $decimal) : string
-    {
-        if($decimal === 0) return '0';
 
-        $stack = new Stack;
+    private $stack;
+
+    public $binary;
+
+    public function setBinary(int $decimal) : DecimalToBinary
+    {
+        if($decimal === 0)
+            $this->binary = '0';
+        
+        $this->stack = new Stack;
+
         $remainder = null;
-        $binaryString = "";
+       
 
         while($decimal > 0) {
             $remainder = floor($decimal % 2);
 
             // push in stack
-            $stack->push($remainder);
+            $this->stack->push($remainder);
 
             // Divide by 2
             $decimal = floor($decimal / 2);
         } 
 
-        while($stack->hasElements()) {
-            $binaryString .= strval($stack->pop());        
+        return $this;
+    }
+
+    public function getBinary() : string
+    {
+
+        $this->binary = ""; 
+
+        while($this->stack->hasElements()) {
+            $this->binary .= strval($this->stack->pop());        
         }
 
-        return $binaryString;
+        return $this->binary;
     }
 }
