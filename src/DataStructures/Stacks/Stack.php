@@ -24,17 +24,17 @@ class Stack
 
     public function hasElements() : bool
     {
-        return (count($this->items) > 0) ? false :true;
+        return (count($this->items) > 0) ? true :false;
     }
 
-    public function size() : integer 
+    public function size() : int 
     {
         return count($this->items);
     }
 
-    public function print() : void
+    public function print() : string
     {
-        echo ($this->size > 0) ? implode(", ", $this->items) : 'Null';
+        return (count($this->items) > 0) ? implode(", ", $this->items) : 'Null';
     }
 
     public function clear() : void
