@@ -1,6 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
+use PHPUnit\Framework\Error\Error;
 use App\DataStructures\Queues\PriorityQueue;
 
 class PriorityQueueTest extends TestCase
@@ -48,5 +49,14 @@ class PriorityQueueTest extends TestCase
     
     }
 
+     /**
+     * @depends testPushItems
+     */
+    public function testEnqueueWithNoIntPriority(PriorityQueue $priorityQueue) 
+    {
+        $this->expectExceptionMessage("The priority must be a positive interger");
+        $this->expectException(InvalidArgumentException::class);
+        $this->priorityQueue->enqueue('ere',9);
+    }
 
 }
