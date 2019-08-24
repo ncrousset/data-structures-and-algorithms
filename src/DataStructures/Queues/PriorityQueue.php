@@ -14,6 +14,8 @@ class PriorityQueue
         }
 
         $this->items[$priority][] = $value;
+
+        return true;
     }
 
     public function dequeue()
@@ -22,9 +24,22 @@ class PriorityQueue
             throw new Exception('Queue is empty.');
         }
 
-        $maxPriority = max($this->items);
+        $priorities = array_keys($this->items);
+        $keyFirstPriority = min($priorities);
 
-        return array_shift($maxPriority);
+        if(count($this->items[$keyFirstPriority]) === 1) {
+          return array_shift($this->items);  
+        } 
+        
+        return array_shift($this->items[$keyFirstPriority]);
+    }
+
+    public function next() 
+    {
+        $priorities = array_keys($this->items);
+        $keyFirstPriority = min($priorities);
+
+        return min($this->items[$keyFirstPriority]);
     }
 
 
