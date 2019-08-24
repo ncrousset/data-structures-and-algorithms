@@ -42,6 +42,37 @@ class PriorityQueue
         return min($this->items[$keyFirstPriority]);
     }
 
+    public function hasElements() : bool
+    {
+        return ($this->size() > 0) ? true : false;
+    }
+
+    public function size() : int
+    {
+        return count($this->items);
+    }
+
+    public function print() : string
+    {
+
+        if($this->hasElements()) {
+            $stringItems = "";
+
+            foreach($this->items as $itemsForPriority) {
+                $stringItems .=  implode("| ", $itemsForPriority);
+            }
+
+            return $stringItems;
+        }
+
+        return "Null";
+    }
+
+    public function clear() : void
+    {
+        $this->items = [];
+    }
+
 
 
 }

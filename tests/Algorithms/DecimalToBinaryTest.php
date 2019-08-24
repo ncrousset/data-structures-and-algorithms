@@ -30,3 +30,4 @@ class DecimalToBinaryTest extends TestCase
 
     }
 }
+

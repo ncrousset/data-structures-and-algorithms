@@ -59,16 +59,56 @@ class PriorityQueueTest extends TestCase
         $this->priorityQueue->enqueue('ere',9);
     }
 
-   
-    public function testDequeueWithEmpty() 
+     /**
+     * @depends testPushItems
+     */
+    public function testHasElementIsTrue(PriorityQueue $priorityQueue)
     {
-        $this->expectExceptionMessage("Queue is empty.");
-        $this->expectException(Exception::class);
-
-        $priorityQueue->dequeue();
-        
+        $this->assertTrue($priorityQueue->hasElements());
     }
 
+    public function testHasElementIsFalse()
+    {
+        $this->assertTrue(!(new PriorityQueue)->hasElements());
+    }
+
+    public function testSizeZero()
+    {
+        $this->assertEquals((new PriorityQueue)->size(), 0);
+    }
+
+    public function testSizeNotZero()
+    {
+        $priorityQueue = new PriorityQueue;
+        $priorityQueue->enqueue(1, 'first');
+ 
+        $this->assertEquals($priorityQueue->size(), 1);
+    }
+
+    public function testPrintQueue()
+    {
+        $priorityQueue = new PriorityQueue;
+        $priorityQueue->enqueue(1, 'first');
+        $this->assertEquals($priorityQueue->print(), 'first');
+    }
+
+    public function testPrintQueueNull()
+    {
+        $priorityQueue= new PriorityQueue;
+      
+        $this->assertEquals($priorityQueue->print(), 'Null');
+    }
+
+    public function testClearQueue()
+    {
+        $priorityQueue = new PriorityQueue;
+        $priorityQueue->enqueue(1,'first');
+        $priorityQueue->clear();
+
+        $this->assertEquals($priorityQueue->size(), 0);
+    }
+
+   
 
 
 }
