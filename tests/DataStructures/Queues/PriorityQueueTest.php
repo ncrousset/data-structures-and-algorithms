@@ -59,4 +59,16 @@ class PriorityQueueTest extends TestCase
         $this->priorityQueue->enqueue('ere',9);
     }
 
+   
+    public function testDequeueWithEmpty() 
+    {
+        $this->expectExceptionMessage("Queue is empty.");
+        $this->expectException(Exception::class);
+
+        $priorityQueue->dequeue();
+        
+    }
+
+
+
 }
