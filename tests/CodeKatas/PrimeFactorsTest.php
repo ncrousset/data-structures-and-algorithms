@@ -56,11 +56,11 @@ class PrimeFactorsTest extends TestCase
 
     public function testItComputesPrimeFactorsOf9()
     {
-        $this->assertEquals( $this->primeFactors->generate(3), [3, 3]);
+        $this->assertEquals( $this->primeFactors->generate(9), [3, 3]);
     }
 
     public function testItComputesPrimeFactorsOf100()
     {
-        $this->assertEquals( $this->primeFactors->generate(100), [2, 2, 5, 6]);
+        $this->assertEquals( $this->primeFactors->generate(100), [2, 2, 5, 5]);
     }
 }

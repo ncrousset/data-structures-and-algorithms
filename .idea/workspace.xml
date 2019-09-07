@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c58e9692-abbf-4e13-9b84-4657ac2f80f0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeKatas/PrimeFactors.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeKatas/PrimeFactors.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/CodeKatas/PrimeFactorsTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CodeKatas/PrimeFactorsTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
