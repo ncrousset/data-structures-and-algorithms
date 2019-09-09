@@ -86,7 +86,8 @@ class RomanNumeralsConverterTest extends TestCase
 
     public function testItCalculatesTheRomanNumeralFor0()
     {
-        $this->assertNull($this->romanNumeralsConverter->convert(0));
+        $this->romanNumeralsConverter->convert(1999);
+        $this->throwException(new \InvalidArgumentException);
     }
 
 }
