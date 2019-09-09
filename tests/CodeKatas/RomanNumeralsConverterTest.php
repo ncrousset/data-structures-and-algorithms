@@ -3,6 +3,7 @@
 namespace Tests\CodeKatas;
 
 use PHPUnit\Framework\TestCase;
+use App\CodeKatas\RomanNumeralsConverter;
 
 class RomanNumeralsConverterTest extends TestCase
 {
@@ -36,7 +37,7 @@ class RomanNumeralsConverterTest extends TestCase
 
     public function testItCalculatesTheRomanNumeralFor6()
     {
-        $this->assertEquals($this->romanNumeralsConverter->convert(1), 'VI');
+        $this->assertEquals($this->romanNumeralsConverter->convert(4), 'VI');
     }
 
     public function testItCalculatesTheRomanNumeralFor9()
