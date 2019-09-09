@@ -37,7 +37,7 @@ class RomanNumeralsConverterTest extends TestCase
 
     public function testItCalculatesTheRomanNumeralFor6()
     {
-        $this->assertEquals($this->romanNumeralsConverter->convert(4), 'VI');
+        $this->assertEquals($this->romanNumeralsConverter->convert(6), 'VI');
     }
 
     public function testItCalculatesTheRomanNumeralFor9()
@@ -84,10 +84,10 @@ class RomanNumeralsConverterTest extends TestCase
         $this->assertEquals($this->romanNumeralsConverter->convert(1999), 'MCMXCIX');
     }
 
-    public function testItCalculatesTheRomanNumeralFor0()
-    {
-        $this->romanNumeralsConverter->convert(1999);
-        $this->throwException(new \InvalidArgumentException);
-    }
+//    public function testItCalculatesTheRomanNumeralFor0()
+//    {
+//        $this->romanNumeralsConverter->convert(1999);
+//        $this->throwException(new \InvalidArgumentException);
+//    }
 
 }

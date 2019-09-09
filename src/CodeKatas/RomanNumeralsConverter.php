@@ -2,7 +2,6 @@
 
 namespace App\CodeKatas;
 
-
 class RomanNumeralsConverter
 {
     protected static $lookup = [
@@ -26,7 +25,7 @@ class RomanNumeralsConverter
      * @param $number
      * @return string
      */
-    public function convert($number)
+    public function convert($number) : string
     {
         $this->guardAgainstInvalidNumber($number);
         $solution = '';
@@ -44,7 +43,7 @@ class RomanNumeralsConverter
     /**
      * @param $number
      */
-    private function guardAgainstInvalidNumber($number)
+    private function guardAgainstInvalidNumber($number) : void
     {
         if ($number <= 0)
         {
