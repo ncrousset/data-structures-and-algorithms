@@ -21,33 +21,33 @@ class BubbleSortTest extends TestCase
         $this->bubbleSort = new BubbleSort;
     }
 
-    public function testTheFirstElementIs1()
+    public function testTheFirstElementIs1(): void
     {
-        $dataArraySorted = $this->bubbleSort->sort();
+        $dataArraySorted = $this->bubbleSort->sort($this->dataArray);
         $this->assertEquals($dataArraySorted[0], 1);
     }
 
-    public function testTheSecondElementIs1()
+    public function testTheSecondElementIs1(): void
     {
-        $dataArraySorted = $this->bubbleSort->sort();
+        $dataArraySorted = $this->bubbleSort->sort($this->dataArray);
         $this->assertEquals($dataArraySorted[1], 5);
     }
 
-    public function testTheThirdElementIs1()
+    public function testTheThirdElementIs1(): void
     {
-        $dataArraySorted = $this->bubbleSort->sort();
+        $dataArraySorted = $this->bubbleSort->sort($this->dataArray);
         $this->assertEquals($dataArraySorted[2], 10);
     }
 
-    public function testTheQuarterElementIs1()
+    public function testTheQuarterElementIs1(): void
     {
-        $dataArraySorted = $this->bubbleSort->sort();
+        $dataArraySorted = $this->bubbleSort->sort($this->dataArray);
         $this->assertEquals($dataArraySorted[3], 58);
     }
 
-    public function testTheFifthElementIs1()
+    public function testTheFifthElementIs1(): void
     {
-        $dataArraySorted = $this->bubbleSort->sort();
+        $dataArraySorted = $this->bubbleSort->sort($this->dataArray);
         $this->assertEquals($dataArraySorted[4], 86);
     }
 
