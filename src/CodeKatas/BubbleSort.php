@@ -23,4 +23,15 @@ class BubbleSort
         return $data;
     }
 
+    /**
+     * Lol, It's just a joke
+     *
+     * @param array $data
+     * @return array
+     */
+    public function easySort(array $data) : array
+    {
+        return sort($data);
+    }
+
 }
