@@ -2,6 +2,7 @@
 
 namespace Tests\CodeKatas;
 use PHPUnit\Framework\TestCase;
+use App\CodeKatas\BubbleSort;
 
 class BubbleSortTest extends TestCase
 {

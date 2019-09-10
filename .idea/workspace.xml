@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c58e9692-abbf-4e13-9b84-4657ac2f80f0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CodeKatas/BubbleSort.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/CodeKatas/BubbleSortTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CodeKatas/BubbleSortTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
